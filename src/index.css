@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #1A1A1A;
+  --color-accent: #C5A059;
+  --color-bg: #F8F5F2; /* 청담디어 스타일의 연한 베이지 크림톤 */
+  --color-cream: #FDFBF9;
+  --font-serif: "Playfair Display", serif;
+  --font-sans: "Inter", "Pretendard", sans-serif;
+}
+
+/* Custom Styles */
+:root {
+  --transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-bg);
+  color: #333333;
+  line-height: 1.7;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, .logo {
+  font-family: var(--font-serif);
+  font-weight: 400;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 60px;
+}
+
+@media (max-width: 768px) {
+  .container { padding: 0 24px; }
+}
+
+section {
+  padding: 180px 0;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--color-bg); }
+::-webkit-scrollbar-thumb { background: #D1CDC7; border-radius: 10px; }
+
+/* Utility Classes */
+.sticky-left {
+  position: sticky;
+  top: 180px;
+  height: fit-content;
+}
+
+.line-accent {
+  width: 40px;
+  height: 1px;
+  background-color: var(--color-accent);
+  margin-bottom: 2rem;
+}
