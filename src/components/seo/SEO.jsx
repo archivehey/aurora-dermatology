@@ -24,6 +24,10 @@ const SEO = ({ title, description, keywords, ogImage, canonicalUrl }) => {
       <meta property="twitter:title" content={fullTitle} />
       <meta property="twitter:description" content={description || defaultDesc} />
       <meta property="twitter:image" content={ogImage || '/og-image.jpg'} />
+
+      {/* Verification Tags - 발급받은 코드를 여기에 넣으세요 */}
+      <meta name="google-site-verification" content="GOOGLE_VERIFICATION_CODE" />
+      <meta name="naver-site-verification" content="NAVER_VERIFICATION_CODE" />
     </Helmet>
   );
 };
